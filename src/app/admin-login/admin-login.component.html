@@ -1,0 +1,15 @@
+<div class="container mt-5" style="max-width: 400px;">
+  <h3>Admin Login</h3>
+  <form (submit)="login(); $event.preventDefault();">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input id="username" type="text" class="form-control" [(ngModel)]="username" name="username" required />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" type="password" class="form-control" [(ngModel)]="password" name="password" required />
+    </div>
+    <div *ngIf="errorMsg" class="alert alert-danger">{{ errorMsg }}</div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
