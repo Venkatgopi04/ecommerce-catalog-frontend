@@ -1,28 +1,29 @@
-✅ Step-by-Step Process (Frontend Only)
-🔹 Step 1: Set up the Angular Project
+Step-by-Step Process: Angular Frontend for E-Commerce Product Catalog
+1. Set up the Angular Project
+
 Open terminal or command prompt.
 
 Create a new Angular 16 project using Angular CLI.
 
-Choose routing support when prompted.
+Enable routing when prompted.
 
-Use CSS or SCSS for styling as per your preference.
+Choose CSS or SCSS for styling.
 
-Install Bootstrap 5 for styling.
+Install Bootstrap 5 for responsive UI design.
 
-🔹 Step 2: Create Components
-Create the following components using Angular CLI:
+2. Create Components
+Generate the following components using Angular CLI:
 
-product-list – to display products in a grid/card view.
+product-list: displays products in a card/grid layout.
 
-product-details – to show selected product details in a modal.
+product-details: shows detailed view of a selected product.
 
-admin-login – for admin to login.
+admin-login: handles admin login functionality.
 
-admin-dashboard – for admin to add or delete products.
+admin-dashboard: allows admin to manage products.
 
-🔹 Step 3: Create Product Model
-Define a model (structure) for a product with fields like:
+3. Create Product Model
+Define a product structure with these fields:
 
 id
 
@@ -34,57 +35,66 @@ price
 
 image URL
 
-🔹 Step 4: Create Product Service
-Build a service to manage product data.
+4. Create Product Service
+Build a service to handle product-related logic:
 
-Use an in-memory list to store products.
+Use an in-memory array to store and manage products.
 
-Include methods to:
+Add methods for:
 
-Get all products
+Retrieving all products
 
-Add a new product
+Adding new products
 
-Delete a product
+Deleting products
 
-Also, handle admin login/logout using localStorage.
+Also implement admin login and logout using localStorage.
 
-🔹 Step 5: Implement Product Listing
-Use Bootstrap cards or grid to show all products.
+5. Implement Product Listing
 
-Use *ngFor loop to display each product dynamically.
+Use Bootstrap grid or cards to show all products.
+
+Use Angular’s looping mechanism to display products dynamically.
 
 Add a "View Details" button on each card.
 
-🔹 Step 6: Implement Product Details Modal
-When "View Details" is clicked, show a modal or a popup.
+6. Implement Product Details Modal
 
-Modal shows complete product details like name, price, image, etc.
+Show a modal popup when "View Details" is clicked.
 
-Include a close button.
+Modal displays complete product details like name, description, price, and image.
 
-🔹 Step 7: Admin Login Page
-Create a simple login form.
+Include a button to close the modal.
 
-Accept email and password.
+7. Admin Login Page
 
-On successful match (hardcoded values), store admin session in localStorage.
+Create a login form that accepts email (username) and password.
 
-Redirect to admin dashboard on successful login.
+Hardcode the credentials for admin login:
 
-🔹 Step 8: Admin Dashboard
-Only accessible if admin is logged in.
+Username: admin
 
-Provide a form to add a new product.
+Password: admin123
 
-List all current products with a delete button for each.
+On successful login, store session information in localStorage.
 
-When a product is added, it shows up in the product list.
+Redirect to the admin dashboard upon login.
 
-When deleted, it is removed from both dashboard and catalog.
+8. Admin Dashboard
 
-🔹 Step 9: Set Up Routing
-Set up routing to navigate between:
+Accessible only if admin is logged in.
+
+Display a form to add new products with fields for name, description, price, and image URL.
+
+Show a list of existing products with a delete button for each.
+
+When a product is added, it should immediately appear in both the dashboard and main catalog.
+
+When a product is deleted, it should be removed from both views.
+
+9. Set Up Routing
+
+Configure routes to switch between:
 
 Home (product list)
 
@@ -92,26 +102,18 @@ Admin login
 
 Admin dashboard
 
-Add navigation links for easy switching.
+Add navigation links for easy access to each route.
 
-🔹 Step 10: Navbar & Final Touches
-Add a Bootstrap navbar for navigation between:
+10. Navbar and UI Enhancements
 
-Home
+Add a Bootstrap navbar with links to Home and Admin Login.
 
-Admin Login
+Show a "Logout" button when the admin is logged in.
 
-Show logout option if admin is logged in.
+Maintain consistent UI and ensure the layout is responsive across devices.
 
-Ensure consistent UI and responsiveness.
+11. Run the Angular Development Server
 
-✅ Final Result:
-A fully working Angular frontend that:
+Open terminal and navigate to the project directory.
 
-Displays products dynamically
-
-Lets admin login using hardcoded credentials
-
-Allows adding/deleting products (admin only)
-
-Uses localStorage for session simulation
+Run the development server using Angular CLI.
